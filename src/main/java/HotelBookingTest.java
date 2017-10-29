@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import static utils.SeleniumUtils.setDriverPath;
+
+
 public class HotelBookingTest {
 
     WebDriver driver = new ChromeDriver();
@@ -38,16 +41,16 @@ public class HotelBookingTest {
 
     }
 
-    private void setDriverPath() {
-        if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
-        }
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        }
-        if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
-        }
-    }
+//    private void setDriverPath() {
+//        if (PlatformUtil.isMac()) {
+//            System.setProperty("webdriver.chrome.driver", "chromedriver");
+//        }
+//        if (PlatformUtil.isWindows()) {
+//            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//        }
+//        if (PlatformUtil.isLinux()) {
+//            System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
+//        }
+//    }
 
 }
