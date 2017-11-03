@@ -7,15 +7,13 @@ import static utils.SeleniumUtils.setDriverPath;
 
 public class DriverManager {
 
+    private static WebDriver driver;
 
-
-    WebDriver driver;
-
-    public   void getDriver(){
-        if(driver==null){
+    public static WebDriver getDriver() {
+        if (driver == null) {
             setDriverPath();
             driver = new ChromeDriver();
         }
-
+        return driver;
     }
 }

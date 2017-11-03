@@ -9,16 +9,20 @@ public class SeleniumUtils {
 
     private static WebDriver driver;
 
-    public static void setDriverPath(String browser) {
-        String key = "webdriver.chrome.driver";
+    public static void setDriverPath() {
+        String chromeKey = "webdriver.chrome.driver";
 
         if (PlatformUtil.isMac()) {
-            System.setProperty(key, "chromedriver");
+            setSystemProperty(chromeKey, "drivers/chromedriver");
         } else if (PlatformUtil.isWindows()) {
-            System.setProperty(key, "chromedriver.exe");
+            setSystemProperty(chromeKey, "drivers/chromedriver.exe");
         } else if (PlatformUtil.isLinux()) {
-            System.setProperty(key, "chromedriver_linux");
+            setSystemProperty(chromeKey, "drivers/chromedriver_linux");
         }
+    }
+
+    private static void setSystemProperty(String key, String chromedriver) {
+        System.setProperty(key, chromedriver);
     }
 
     public static void waitFor(int milliseconds) {
