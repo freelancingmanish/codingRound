@@ -7,7 +7,6 @@ public class FlightBookingTests extends TestManager{
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
         FlightBookingPage flightBookingPage = new FlightBookingPage();
-        flightBookingPage.launchClearTrip();
         flightBookingPage.clickOneWayButton();
         flightBookingPage.enterAndSelectSource("BLR");
         flightBookingPage.enterAndSelectDestination("IXR");
